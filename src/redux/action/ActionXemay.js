@@ -1,6 +1,10 @@
 import {createAsyncThunk} from '@reduxjs/toolkit'
 
+<<<<<<< HEAD
 const api_url = 'http://192.168.0.103:3000/xemay';
+=======
+const api_url = 'http://192.168.0.104:3000/xemay';
+>>>>>>> origin/main
 
 export const fetchXemayApi = createAsyncThunk(
     'xemay/fetchXemay',
@@ -74,7 +78,11 @@ export const updateXemayApi =createAsyncThunk(
                     'Accept':'application/json',
                     'Content-Type':'application/json'
                 },
+<<<<<<< HEAD
                 body:JSON.stringify(objUpdate)
+=======
+                body:JSON.stringify(objUpdate.data)
+>>>>>>> origin/main
             });
             const data = await response.json();
             if(response.ok){
